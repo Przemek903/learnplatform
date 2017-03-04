@@ -24,5 +24,6 @@ module Learnplatform
     Rails.application.config.assets.precompile += %w( startpage.css )
     Rails.application.config.assets.precompile += %w( startpage.js )
     config.active_record.raise_in_transactional_callbacks = true
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
 end
