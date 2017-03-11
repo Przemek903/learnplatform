@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
+
   ActiveAdmin.routes(self)
+
+  namespace :admin do
+    resources :domains do
+      resources :courses do
+        resources :lessons do
+
+        end
+      end
+    end
+  end
+
   devise_for :users, :controllers => { registrations: 'users/registrations' }
   get 'dashboard/panel'
 

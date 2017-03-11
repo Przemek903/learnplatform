@@ -12,7 +12,11 @@
 class Course < ApplicationRecord
 
   has_and_belongs_to_many :users
-  has_one :domain
+  belongs_to :domain
   has_many :certificates
+  has_many :lessons
+
+  validates :name, presence: true , uniqueness: true
+  validates :description, presence: true
 
 end
