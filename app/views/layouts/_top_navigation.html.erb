@@ -1,0 +1,22 @@
+<!-- top navigation -->
+<div class="top_nav">
+  <div class="nav_menu">
+    <nav>
+      <div class="nav toggle">
+        <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="">
+          <% if user_signed_in? %>
+            <%= link_to "Wyloguj się", destroy_user_session_path, method: :delete %>
+          <% end %>
+        </li>
+        <li class="">
+          <%= link_to "Profil", edit_user_registration_path(current_user) %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<!-- /top navigation -->

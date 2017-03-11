@@ -1,0 +1,13 @@
+<!-- menu profile quick info -->
+<% if user_signed_in? %>
+  <div class="profile clearfix">
+    <div class="profile_pic">
+      <img src="<%= image_path('butterlfly/team-leader-pic2.jpg')%>" alt="..." class="img-circle profile_img">
+    </div>
+    <div class="profile_info">
+      <span>Witaj,</span>
+      <h2><%= current_user.full_name %></h2>
+    </div>
+  </div>
+<% end %>
+<!-- /menu profile quick info -->
